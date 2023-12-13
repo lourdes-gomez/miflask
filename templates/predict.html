@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Introduce tus datos para conocer tu estado físico {% endblock %}</h1>
+    <form method="post">
+        <label for="Edad">Edad</label>
+        <br>
+        <input type="text" name="Edad"
+               placeholder="Introduce tu edad"
+               value="{{ request.form['Edad'] }}"></input>
+        <br>
+
+        <label for="Genero">Genero (0 si eres hombre 1 si eres mujer)</label>
+        <br>
+        <input type="text" name="Genero"
+               placeholder="Introduce 0 o 1 "
+               value="{{ request.form['Genero'] }}"></input>
+        <br>
+
+        <label for="Altura">Altura en cm</label>
+        <br>
+        <input type="text" name="Altura"
+               placeholder="Introduce altura en cm"
+               value="{{ request.form['Altura'] }}"></input>
+        <br>
+
+        <label for="Peso">Peso corporal en kg</label>
+        <br>
+        <input type="text" name="Peso"
+               placeholder="Introduce peso en kg"
+               value="{{ request.form['Peso'] }}"></input>
+        <br>
+
+        <label for="Grasa">Grasa corporal en %</label>
+        <br>
+        <input type="text" name="Grasa"
+               placeholder="Introduce grasa en %"
+               value="{{ request.form['Grasa'] }}"></input>
+        <br>
+
+        <label for="Presión_diastólica">Presión diastólica</label>
+        <br>
+        <input type="text" name="Presión_diastólica"
+               placeholder="Introduce presion en mm Hg"
+               value="{{ request.form['Presión_diastólica'] }}"></input>
+        <br>
+        
+        <label for="Presión_sistólica">Presión sistólica</label>
+        <br>
+        <input type="text" name="Presión_sistólica"
+               placeholder="Introduce presion en mm Hg"
+               value="{{ request.form['Presión_sistólica'] }}"></input>
+        <br>
+
+        <label for="Flexiblidad">Flexiblidad sentado hacia delante</label>
+        <br>
+        <input type="text" name="Flexibilidad"
+               placeholder="Introduce flexibilidad en cm"
+               value="{{ request.form['Flexiblidad'] }}"></input>
+        <br>
+
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

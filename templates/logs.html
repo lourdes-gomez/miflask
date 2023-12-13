@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Introduce las fechas que deseas consultar las predicciones {% endblock %}</h1>
+    <form method="post">
+        <label for="start">Fecha inicio</label>
+        <br>
+        <input type="text" name="start"
+               placeholder="aaaa-mm-dd "
+               value="{{ request.form['start'] }}"></input>
+        <br>
+
+        <label for="end">Fecha fin</label>
+        <br>
+        <input type="text" name="end"
+               placeholder="aaaa-mm-dd"
+               value="{{ request.form['end'] }}"></input>
+        <br>
+
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
